@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <header class="fondoPrincipal">
+            Unidad 2
+        </header>
+        <br>
+            <nav class="unidades">
+                Contenido
+                <ul>
+                    <li> <h6> <a href = "Pagina.html"> Pagina principal </a></h6></li>
+                    <li> <h6> <a href = "Unidad1.html"> Unidad 1 </a></h6></li>
+                    <li> <h6> <a href = "Unidad2.html"> Unidad 2 </a></h6></li>
+                    <li> <h6> <a href = "Unidad3.html"> Unidad 3 </a></h6></li>
+                    <li> <h6> <a href = "unidad4.html"> Unidad 4 </a></h6></li>
+                    <li> <h6> <a href = "Practicas.html"> Practicas </a></h6></li>
+                    <li> <h6> <a href = "Extras.html"> Extras </a></h6></li>
+                </ul>
+            </nav>
+            <article>
+                <p>
+                    <h1>Organización del procesador</h1>
+                </p>
+                <p>
+                    La Unidad de Procesamiento (CPU) controla el funcionamiento del computador y lleva a cabo sus funciones de 
+                    procesamiento de datos. Frecuentemente se le llama procesador.
+                </p>
+                <p>
+                    Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. 
+                    Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, 
+                    mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, 
+                    un claro ejemplo es el contador de programa.
+                </p>
+                <p>
+                    Lleva a cabo una gran variedad de:<br><br>
+                    •Cálculos<br>
+                    •Comparaciones numéricas<br>
+                    •Transferencias de datos como respuesta a las peticiones de los programas que están siendo ejecutados en memoria.
+                </p>
+                <p>
+                    La CPU controla las operaciones básicas del ordenador enviando y recibiendo señales de control, 
+                    direcciones de memoria y datos de un lugar a otro de la computadora a través de un grupo de canales llamados BUS.
+                </p>
+                <p>
+                    La Unidad Central de Proceso está constituida internamente por:<br><br>
+                    •La Unidad de Control<br>
+                    •Unidad Aritmético-Lógica
+                </p>
+                <p>
+                    El ALU (Unidad Aritmética-Lógica) recibe los datos sobre los que efectúa operaciones de cálculo y comparaciones. 
+                    Toma decisiones lógicas (determina si una afirmación es correcta o falsa mediante reglas del algebra de Boole) y devuelve luego el resultado. 
+                    Todo ello bajo supervisión de la unidad de control.
+                </p>
+                <p>
+                    La unidad de control le indica al resto del sistema como llevar a cabo las instrucciones de un programa. 
+                    Comanda las señales electrónicas entre la memoria y la unidad aritmeticológica, y entre el CPU y los dispositivos de entrada y salida. 
+                    Para ejecutar cualquier programa, cada comando de este se desglosa en instrucciones.
+                </p>
+                <p>
+                    Los procesadores utilizan la segmentación de instrucciones para acelerar la ejecución. 
+                    La segmentación de cauce se puede dividir en ciclo de instrucción en varias etapas separadas que operan secuencialmente, 
+                    tales como la captación de instrucción, decodificación de instrucción, cálculo de direcciones de operando, 
+                    ejecución de instrucción y estructura del operando resultado.
+                </p>
+                <p>
+                    <h1>Estructura de registros</h1>
+                </p>
+                <p>
+                    Los registros del CPU se emplean para controlar las instrucciones en ejecución, 
+                    manejar direccionamiento de memoria y propiciar la capacidad aritmética.
+                </p>
+                <p>
+                    Los registros vienen de tres tipos: datos, direcciones e índice, 
+                    que tiene lugar en casi todos los aspectos de la operación del CPU. 
+                    El tamaño de un registro depende del CPU; 
+                    los más simples tienen registros que aceptan 8 o 16 bits de datos y los más complejos tienen registros de 32, 48 o 64 bits.
+                </p>
+                <p>
+                    <h3>Registros visibles para el usuario</h3>
+                </p>
+                <p>
+                    Permiten al programador del lenguaje de máquina o de ensamblador minimizar las referencias a memoria principal 
+                    por medio de la optimización del uso de registros.<br> Un registro visible por el usuario es aquel que puede ser referenciado 
+                    por medio del lenguaje de máquina que ejecuta el procesador.
+                </p>
+                <p>
+                    <h3>Registros de control y de estado</h3>
+                </p>
+                <p>
+                    Son utilizados por la unidad de control para controlar el funcionamiento del procesador y por programas privilegiados 
+                    del sistema operativo para controlar la ejecución de programas.
+                </p>
+                <p>
+                    Hay diversos registros de la CPU que se emplean para controlar su funcionamiento, la mayoría de ellos, en muchas máquinas, 
+                    no son visibles por el usuario. Algunos de ellos pueden ser visibles a instrucciones de máquina ejecutadas en un modo de control o de SO.
+                </p>
+                <p>
+                    Naturalmente máquinas diferentes tendrán diferentes organizaciones de registros y usarán distinta terminología. 
+                    Son esenciales cuatro registros para la ejecución de una instrucción:<br><br>
+                    •Contador de programa (PC) contiene la dirección de la instrucción a captar.<br>
+                    •Registro de instrucción (IR) contiene la instrucción captada más recientemente.<br>
+                    •Registro de dirección de memoria (MAR) contiene la dirección de una posición de memoria.<br>
+                    •Registro intermedio de memoria (MBR) contiene la palabra de datos a escribir en memoria, 
+                    o la palabra leída más recientemente.
+                </p>
+                <p>
+                    <h3>Ejemplos de registros de cpu reales</h3>
+                </p>
+                <p>
+                    Resulta instructivo examinar y comparar las organizaciones de registros de sistemas análogos. 
+                    En esta sección, examinamos dos microprocesadores de 16 bits que fueron diseñados aproximadamente al mismo tiempo: 
+                    el Motorola MC68000 [STRI79] y el lntel 8086 [MORS78].<br>
+                    <img src="../Media/Captura de pantalla 2022-05-20 090225.png">
+                </p>
+                <p>
+                    Las (a) y (b) representan la organización de registros de cada uno de ellos; 
+                    los registros estrictamente internos, tales como el registro de dirección de memoria, 
+                    no se muestran. En la (c) se ilustra un segundo aspecto instructivo acerca del diseño de la organización de los registros.
+                </p>
+                <p>
+                    <h1>El ciclo de instrucciones</h1>
+                </p>
+                <p>
+                    Un ciclo de instrucción (también llamado ciclo de fetch-and-execute o ciclo de fetchdecode-execute en inglés) 
+                    es el período que tarda la unidad central de proceso (CPU) en ejecutar una instrucción de lenguaje máquina.
+                </p>
+                <p>
+                    Comprende una secuencia de acciones determinada que debe llevar a cabo la CPU para ejecutar cada instrucción en un programa. 
+                    Cada instrucción del juego de instrucciones de una CPU puede requerir diferente número de ciclos de instrucción para su ejecución.
+                </p>
+                <p>
+                    <h3>Ciclo Fetch-Decode-Excecute</h3>
+                </p>
+                <p>
+                    <ul class="lista">
+                        <li>
+                            Buscar la instrucción en la memoria principal<br><br>
+                            •Se vuelca el valor del contador de programa sobre el bus de direcciones.<br>
+                            •Entonces la CPU pasa la instrucción de la memoria principal a través del bus de datos al Registro de Datos de Memoria (MDR).<br>
+                            •A continuación el valor del MDR es colocado en el Registro de Instrucción Actual (CIR), un circuito que guarda la instrucción temporalmente de manera que pueda ser decodificada y ejecutada.
+                        </li>
+                        <br>
+                        <li>
+                            Decodificar la señal <br><br>
+                            •El decodificador de instrucción interpreta e implementa la instrucción.<br> 
+                            •El registro de instrucción (IR) mantiene la instrucción en curso mientras el contador de programa (PC, program counter) guarda la dirección de memoria de la siguiente instrucción a ser ejecutada.<br>
+                            •Recogida de datos desde la memoria principal <br>
+                            •También se lee la dirección efectiva de la memoria principal si la instrucción tiene una dirección indirecta, y se recogen los datos requeridos de la memoria principal para ser procesados y colocados en los registros de datos.
+                        </li>
+                        <br>
+                        <li>
+                            Ejecutar la instrucción<br><br>
+                            •A partir del registro de instrucción, los datos que forman la instrucción son decodificados por la unidad de control.<br>
+                            •Ésta interpreta la información como una secuencia de señales de control que son enviadas a las unidades funcionales relevantes de la CPU para realizar la operación requerida por la instrucción.
+                        </li>
+                        <br>
+                        <li>
+                            Almacenar o guardar resultados<br><br>
+                            •El resultado generado por la operación es almacenado en la memoria principal o enviado a un dispositivo de salida dependiendo de la instrucción.<br>
+                            •Basándose en los resultados de la operación, el contador de programa se incrementa para apuntar a la siguiente instrucción o se actualiza con una dirección diferente donde la próxima instrucción será recogida.
+                        </li>
+                        <br>
+                        <li>
+                            Ciclo de búsqueda<br><br>
+                            •Los pasos 1 y 2 del ciclo de instrucción se conocen como ciclo de búsqueda (fetch). Estos pasos son idénticos en todas las instrucciones.<br>
+                            •El ciclo de búsqueda procesa la instrucción a partir de la palabra de instrucción, que contiene el código de operación y el operando.
+                        </li>
+                        <br>
+                        <li>
+                            Ciclo de ejecución<br><br>
+                            Los pasos 3 y 4 del ciclo de instrucción se conocen como ciclo de ejecución. Estos pasos cambiarán con cada tipo de instrucción.<br><br>
+                            •El primer paso del ciclo de ejecución es el proceso de memoria, en que los datos se transfieren entre la CPU y el módulo de entrada/salida (I/O).<br>
+                            •A continuación se produce el proceso de datos, que usa operaciones matemáticas así como operaciones lógicas en referencia a los datos.<br>
+                            •Después tiene lugar el paso de alteraciones centrales, que son una secuencia de operaciones, por ejemplo una operación de salto. El último paso es una operación combinada de todos los otros pasos.<br>
+                        </li>
+                    </ul>
+                    <br>
+                    <img src="../Media/instruccion.png">
+                </p>
+                <br>
+                <p>
+                    <h3>segmentación de instrucciones</h3>
+                </p>
+                <p>
+                    Es una técnica que permite implementar el paralelismo a nivel de instrucción en un único procesador. 
+                    La segmentación intenta tener ocupadas con instrucciones todas las partes del procesador dividiendo las 
+                    instrucciones en una serie de pasos secuenciales que efectuarán distintas unidades de la CPU, 
+                    tratando en paralelo diferentes partes de las instrucciones. 
+                    Permite una mayor tasa de transferencia efectiva por parte de la CPU que la que sería posible a una determinada 
+                    frecuencia de reloj, pero puede aumentar la latencia debido al trabajo adicional que supone el propio proceso de 
+                    la segmentación.
+                </p>
+                <p>
+                    <h3>Conjunto de instrucciones</h3>
+                </p>
+                <p>
+                    Ante el diseño de un nuevo ordenador de propósito general hay que plantearse la siguiente cuestión: ¿Qué tipos de instrucciones deben ser incluidos en sus conjuntos de instrucciones? 
+                    Antes de responder a esta pregunta, analizaremos las características que deben tener los juegos de instrucciones de las máquinas. 
+                    Los conjuntos de instrucciones de las máquinas deben tender a poseer una serie de propiedades, bastante ideales e imprecisas, 
+                    que pueden resumirse en las siguientes: El conjunto de instrucciones de un computador debe ser completo en el sentido de que se pueda 
+                    construir un programa para evaluar una función computable usando una cantidad de memoria razonable y empleando un tiempo moderado, 
+                    es decir, el número de instrucciones de ese programa no debe ser demasiado elevado. 
+                    Los juegos de instrucciones también tienen que ser eficientes, 
+                    esto significa que las funciones más necesarias deben poder realizarse usando pocas instrucciones. 
+                    El conjunto de instrucciones de una máquina debe ser regular, es decir debe ser simétrico y ortogonal, es decir, 
+                    deben poder combinarse, en la medida de lo posible, todas las operaciones con todos los tipos de datos y modos de direccionamiento.
+                </p>
+                <p>
+                    <h5>Tipo de instrucciones</h5>
+                </p>
+                <p>
+                    Una máquina puede llegar a funcionar con un juego de instrucciones muy limitado 
+                    (recuérdese, por ejemplo, la máquina de Turing que sólo tiene 4 instrucciones, 
+                    incluso se han diseñado máquinas teóricas con menos instrucciones), 
+                    esto simplificaría mucho los circuitos de la máquina. Sin embargo, 
+                    un conjunto de instrucciones demasiado simplificado origina, como consecuencia, 
+                    unos programas demasiado complejos e ineficientes. 
+                    Es necesario encontrar un compromiso entre la simplicidad del hardware y del software. 
+                    Un mínimo para llegar a ese compromiso se consigue con los tipos de instrucciones siguientes: 
+                    Instrucciones de transferencia de datos. Instrucciones aritméticas. Instrucciones lógicas. 
+                    Instrucciones de control del flujo del programa (bifurcaciones, bucles, procedimientos, etc.) 
+                    Instrucciones de entrada y salida. 
+                    En los apartados siguientes iremos viendo con detalle algunos de estos tipos de instrucciones. 
+                    Si bien es cierto que el conjunto de instrucciones debe de cumplir unos mínimos para conseguir una mínima eficiencia en 
+                    los programas.
+                </p>
+                <p>
+                    <h3>Modelos de direccionamiento</h3>
+                </p>
+                <p>
+                    Son un mecanismo que permite conocer la ubicación de un objeto (dato o instrucción).
+                </p>
+                <p>
+                    Un computador debe disponer de varios modos de direccionamiento.
+                </p>
+                <p>
+                    No todos los modos de direccionamiento están implementados en todos los computadores.
+                </p>
+                <p>
+                    Los modos de direccionamiento disponibles están determinados por la arquitectura interna de la máquina y por el repertorio de instrucciones
+                </p>
+                <p>
+                    <h5>La Dirección efectiva de un operando (EA)</h5> 
+                    <p>
+                        Se refiere a la dirección de una localidad de memoria con respecto a una 
+                        dirección inical de un segmento, estas pueen tomar valores que van desde 0000H hasta FFFFH (H: valor en hexadecimal).
+                    </p>
+                </p>
+                <p>
+                    <h5>Dirección física (PA):</h5> 
+                    <p>
+                        también llamada dirección final, 
+                        esta es calculada con la dirección efectiva y un registro de segmento a propiado.
+                    </p>
+                </p>
+                <p>
+                    <h5>Tipos de modelos de dirrecionamiento</h5>
+                    <p>
+                        •Direccionamiento Inmediato.<br>
+                        •Direccionamiento Directo.<br>
+                        •Direccionamiento Por registro.<br>
+                        •Direccionamiento Inmediato por registro.<br>
+                        •Direccionamiento Relativo por registro.<br>
+                        •Direccionamiento Índice más base.<br>
+                        •Direccionamiento Relativo índice más base.
+                    </p>
+                </p>
+            </article>
+    </section>
+</body>
+</html>

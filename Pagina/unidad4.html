@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <header class="fondoPrincipal">
+            Unidad 4
+        </header>
+        <br>
+            <nav class="unidades">
+                Contenido
+                <ul>
+                    <li> <h6> <a href = "Pagina.html"> Pagina principal </a></h6></li>
+                    <li> <h6> <a href = "Unidad1.html"> Unidad 1 </a></h6></li>
+                    <li> <h6> <a href = "Unidad2.html"> Unidad 2 </a></h6></li>
+                    <li> <h6> <a href = "Unidad3.html"> Unidad 3 </a></h6></li>
+                    <li> <h6> <a href = "Unidad4.html"> Unidad 4 </a></h6></li>
+                    <li> <h6> <a href = "Practicas.html"> Practicas </a></h6></li>
+                    <li> <h6> <a href = "Extras.html"> Extras </a></h6></li>
+                </ul>
+            </nav>
+            <article>
+                <p>
+                    <h1>Procesamiento paralelo</h1>
+                </p>
+                <p>
+                    <h3>Aspectos básicos de la computación paralela</h3>
+                </p>
+                <p>
+                    Es un conjunto de elementos de procesos independientes que operan de una forma conjunta para resolver 
+                    problemas de elevado coste computacional.
+                </p>
+                <p>
+                    Ámbito de aplicación:<br><br>
+                    •Desde la conexión de procesadores.<br>
+                    •Hasta la conexión de computadores.
+                </p>
+                <p>
+                    La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, 
+                    operando sobre el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, 
+                    que luego son resueltos simultáneamente (en paralelo).
+                </p>
+                <p>
+                    Hay varias formas diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, 
+                    paralelismo de datos y paralelismo de tareas. El paralelismo se ha empleado durante muchos años, 
+                    sobre todo en la computación de altas prestaciones, 
+                    pero el interés en ella ha crecido últimamente debido a las limitaciones físicas que impiden el aumento de la frecuencia. 
+                    Como el consumo de energía —y por consiguiente la generación de calor— de las computadoras constituye una preocupación en los 
+                    últimos años, la computación en paralelo se ha convertido en el paradigma dominante en la arquitectura de computadores, 
+                    principalmente en forma de procesadores multinúcleo.
+                </p>
+                <p>
+                    <h3>Tipos de computación paralela</h3>
+                </p>
+                <p>
+                    <h5>Paralelismo a nivel de bit:</h5>
+                    <p>
+                        Desde el advenimiento de la integración a gran escala (VLSI) como tecnología de fabricación de chips de 
+                        computadora en la década de 1970 hasta alrededor de 1986, 
+                        la aceleración en la arquitectura de computadores se lograba en gran medida duplicando el tamaño de la palabra en la computadora, 
+                        la cantidad de información que el procesador puede manejar por ciclo. 
+                    </p>
+                    <p>
+                        El aumento del tamaño de la palabra reduce el número de instrucciones que el procesador debe ejecutar para realizar una operación en variables cuyos 
+                        tamaños son mayores que la longitud de la palabra. Por ejemplo, cuando un procesador de 8 bits debe sumar dos enteros de 16 bits, 
+                        el procesador primero debe adicionar los 8 bits de orden inferior de cada número entero con la instrucción de adición, a continuación, 
+                        añadir los 8 bits de orden superior utilizando la instrucción de adición con acarreo que tiene en cuenta el bit de acarreo de la adición 
+                        de orden inferior, en este caso un procesador de 8 bits requiere dos instrucciones para completar una sola operación, 
+                        en donde un procesador de 16 bits necesita una sola instrucción para poder completarla.
+                    </p>
+                    <p>
+                        Históricamente, los microprocesadores de 4 bits fueron sustituidos por unos de 8 bits, luego de 16 bits y 32 bits, 
+                        esta tendencia general llegó a su fin con la introducción de procesadores de 64 bits, 
+                        lo que ha sido un estándar en la computación de propósito general durante la última década.
+                    </p>
+                </p>
+                <p>
+                    <h5>Paralelismo a nivel de instrucción:</h5>
+                    <p>
+                        Un programa de ordenador es, en esencia, una secuencia de instrucciones ejecutadas por un procesador. 
+                        Estas instrucciones pueden reordenarse y combinarse en grupos que luego son ejecutadas en paralelo sin 
+                        cambiar el resultado del programa. Esto se conoce como paralelismo a nivel de instrucción.
+                    </p>
+                    <p>
+                        Los procesadores modernos tienen ''pipeline'' de instrucciones de varias etapas. 
+                        Cada etapa en el pipeline corresponde a una acción diferente que el procesador realiza en la instrucción correspondiente a la etapa.
+                    </p>
+                    <p>
+                        Además del paralelismo a nivel de instrucción del pipelining, 
+                        algunos procesadores pueden ejecutar más de una instrucción a la vez. Estos son conocidos como procesadores superescalares. 
+                        Las instrucciones pueden agruparse juntas sólo si no hay dependencia de datos entre ellas. 
+                        El scoreboarding y el algoritmo de Tomasulo —que es similar a scoreboarding pero hace uso del renombre de registros— 
+                        son dos de las técnicas más comunes para implementar la ejecución fuera de orden y la paralelización a nivel de instrucción.
+                    </p>
+                    <p>
+                        Un pipeline canónico de cinco etapas en una máquina RISC (IF = Pedido de Instrucción, ID = Decodificación de instrucción, EX = 
+                        Ejecutar, MEM = Acceso a la memoria, WB = Escritura).
+                    </p>
+                </p>
+                <p>
+                    <h5>Paralelismo de datos</h5>
+                    <p>
+                        El paralelismo de datos es el paralelismo inherente en programas con ciclos, 
+                        que se centra en la distribución de los datos entre los diferentes nodos computacionales que deben tratarse en paralelo. 
+                        La paralelización de ciclos conduce a menudo a secuencias similares de operaciones —no necesariamente idénticas— o 
+                        funciones que se realizan en los elementos de una gran estructura de datos. 
+                        Muchas de las aplicaciones científicas y de ingeniería muestran paralelismo de datos.
+                    </p>
+                    <p>
+                        Una dependencia de terminación de ciclo es la dependencia de una iteración de un ciclo en la salida de una o más iteraciones anteriores. 
+                        Las dependencias de terminación de ciclo evitan la paralelización de ciclos.
+                    </p>
+                    <p>
+                        Un procesador superescalar con pipeline de cinco etapas, capaz de ejecutar dos instrucciones por ciclo. 
+                        Puede tener dos instrucciones en cada etapa del pipeline, 
+                        para un total de hasta 10 instrucciones (se muestra en verde) ejecutadas simultáneamente.
+                    </p>
+                </p>
+                <p>
+                    <h5>Paralelismo de tareas</h5>
+                    <p>
+                        El paralelismo de tareas es la característica de un programa paralelo en la que cálculos 
+                        completamente diferentes se pueden realizar en cualquier conjunto igual o diferente de datos. 
+                        Esto contrasta con el paralelismo de datos, donde se realiza el mismo cálculo en distintos o mismos grupos de datos.
+                    </p>
+                </p>
+                <p>
+                    <h3>Clasificación</h3>
+                </p>
+                <p>
+                    La clasificación de Flynn ha demostrado funcionar bastante bien para la tipificación de sistemas, 
+                    y se ha venido usando desde décadas por la mayoría de los arquitectos de computadores. Sin embargo, 
+                    los avances en tecnología y diferentes topologías, 
+                    han llevado a sistemas que no son tan fáciles de clasificar dentro de los 4 tipos de Flynn. Por ejemplo, 
+                    los procesadores vectoriales no encajan adecuadamente en esta clasificación, ni tampoco las arquitecturas hibridas. 
+                    Para solucionar esto se han propuesto otras clasificaciones, donde los tipos SIMD y MIMD de Flynn se suelen conservar, 
+                    pero que sin duda no han tenido el éxito de la de Flynn.<br>
+                    <img src="../Media/Imagen3.jpg">
+                </p>
+                <p>
+                    <h3>Arquitectura de computadoras secuenciales</h3>
+                </p>
+                <p>
+                    <h5>Taxonomía de Flynn</h5>
+                    <p>
+                        Probablemente la clasificación más popular de computadores sea la clasificación de Flynn. 
+                        Esta taxónoma de las arquitecturas está basada en la clasificación atendiendo al flujo de datos e 
+                        instrucciones en un sistema. Un flujo de instrucciones es el conjunto de instrucciones secuenciales que son ejecutadas 
+                        por un único procesador, y un flujo de datos es el flujo secuencial de datos requeridos por el flujo de instrucciones. 
+                        Con estas consideraciones, Flynn clasifica los sistemas en cuatro categorías:
+                    </p>
+                </p>
+                <p>
+                    <h5>SISD (Single Instruction stream, Single Data stream)</h5>
+                    <p>
+                        Flujo único de instrucciones y flujo único de datos. 
+                        Este el concepto de arquitectura serie de Von Neumann donde, en cualquier momento, 
+                        sólo se está ejecutando una única instrucción. A menudo a los SISD se les conoce como computadores serie escalares. 
+                        Todas las maquinas SISD poseen un registro simple que se llama contador de programa que asegura la ejecución en serie 
+                        del programa. Conforme se van leyendo las instrucciones de la memoria, el contador de programa se actualiza para que 
+                        apunte a la siguiente instrucción a procesar en serie.
+                    </p>
+                </p>
+                <p>
+                    <h5>MISD (Multiple Instruction stream, Single Data stream)</h5>
+                    <p>
+                        Flujo múltiple de instrucciones y único flujo de datos. Esto significa que varias instrucciones actúan sobre el mismo y único trozo de datos. 
+                        Este tipo de máquinas se pueden interpretar de dos maneras. Una es considerar la clase de máquinas que requerirían que unidades 
+                        de procesamiento diferentes recibieran instrucciones distintas operando sobre los mismos datos. 
+                        Esta clase de arquitectura ha sido clasificada por numerosos arquitectos de computadores como impracticable o imposible, 
+                        y en estos momentos no existen ejemplos que funcionen siguiendo este modelo. 
+                        Otra forma de interpretar los MISD es como una clase de máquinas donde un mismo flujo de datos fluye a través de 
+                        numerosas unidades procesadoras. Arquitecturas altamente segmentadas, como los arrays sistólicos o los procesadores vectoriales, 
+                        son clasificados a menudo bajo este tipo de máquinas. 
+                    </p>
+                </p>
+                <p>
+                    <h5>SIMD (Single Instruction stream, Multiple Data stream)</h5>
+                    <p>
+                        Flujo de instrucción simple y flujo de datos múltiple. 
+                        Esto significa que una única instrucción es aplicada sobre diferentes datos al mismo tiempo. 
+                        En las máquinas de este tipo, varias unidades de procesado diferentes son invocadas por una única unidad de control.
+                    </p>
+                </p>
+                <p>
+                    <h5>MIMD (Multiple Instruction stream, Multiple Data stream)</h5>
+                    <p>
+                        Flujo de instrucciones múltiple y flujo de datos múltiple. 
+                        Son máquinas que poseen varias unidades procesadoras en las cuales se pueden realizar múltiples instrucciones sobre datos 
+                        diferentes de forma simultánea. Las MIMD son las más complejas, pero son también las que potencialmente ofrecen una mayor 
+                        eficiencia en la ejecución concurrente o paralela. 
+                    </p>
+                </p>
+                <p>
+                    <img src="../Media/Imagen4.jpg">
+                </p>
+                <p>
+                    <h3>Organización de direcciones de memoria</h3>
+                </p>
+                <p>
+                    Para que un proceso pueda ejecutarse debe estar ubicado en la memoria principal del ordenador. 
+                    Una parte del sistema operativo se va a encargar de gestionar la memoria principal, 
+                    de forma que los procesos puedan residir en la memoria sin conflictos. La gestión de la memoria implica varias tareas, 
+                    una de ellas es llevar un registro de qué zonas están libres (es decir, no están siendo utilizadas por ningún proceso), 
+                    y qué zonas están ocupadas por qué procesos.
+                </p>
+                <p>
+                    Otros dos temas importantes en la gestión de la memoria son el de la carga de los programas de disco a memoria y el de la protección. 
+                    Desde el momento en que varios procesos deben compartir la memoria del ordenador surge el problema de la protección. 
+                    En general, se pretende que un proceso no pueda modificar las direcciones de memoria en las que no reside. 
+                    Esto es así ya que en las direcciones de memoria donde no está ubicado el proceso pueden residir otros procesos, 
+                    o código o estructuras de datos del S.O.
+                </p>
+                <p>
+                    <h3>Sistema de memorias multiprocesadores</h3>
+                </p>
+                <p>
+                    Un multiprocesador puede verse como un computador paralelo compuesto por varios procesadores 
+                    interconectados que comparten un mismo sistema de memoria.
+                </p>
+                <p>
+                    Los sistemas multiprocesadores son arquitecturas MIMD con memoria compartida. Tienen un único espacio de direcciones para todos los 
+                    procesadores y los mecanismos de comunicación se basan en el paso de mensajes desde el punto de vista del programador.
+                </p>
+                <p>
+                    Dado que los multiprocesadores comparten diferentes módulos de memoria, pudiendo acceder a un mismo módulo varios procesadores, 
+                    a los multiprocesadores también se les llama sistemas de memoria compartida.
+                </p>
+                <p>
+                    Dependiendo de la forma en que los procesadores comparten la memoria, se clasifican en sistemas multiprocesador UMA, NUMA y COMA.
+                </p>
+                <p>
+                    Multiproceso es tradicionalmente conocido como el uso de múltiples procesos concurrentes en un sistema en lugar de un único proceso en un instante determinado. 
+                    Como la multitarea que permite a múltiples procesos compartir una única CPU, 
+                    múltiples CPUs pueden ser utilizados para ejecutar múltiples hilos dentro de un único proceso.
+                </p>
+                <p>
+                    <h3>Redes de interconexión dinámica medio compartido conmutador</h3>
+                </p>
+                <p>
+                    Uno de los criterios más importantes para la clasificación de las redes es el que tiene en cuenta la situación de la red en la máquina paralela, 
+                    dando lugar a dos familias de redes: redes estáticas y redes dinámicas.
+                </p>
+                <p>
+                    La red simplemente une los diversos elementos de acuerdo con una configuración dada. 
+                    Se utiliza sobre todo en el caso de los multicomputadoras para conectar los diversos procesadores que posee la máquina.
+                </p>
+                <p>
+                    Las redes dinámicas se utilizan sobre todo en los multiprocesadores. 
+                    En este caso, la red une los procesadores a los bancos de memoria central. 
+                    Cualquier acceso de un procesador a la memoria debe pasar a través de la red, por lo que se dice que la red tiene un acoplamiento fuerte.
+                </p>
+                <p>
+                    <h3>Sistema de memoria distribuida</h3>
+                </p>
+                <p>
+                    Los sistemas de memoria distribuida o multicomputadoras pueden ser de dos tipos básicos. 
+                    El primer de ellos consta de un único computador con múltiples CPUs comunicadas por un bus de datos mientras que en el segundo 
+                    se utilizan múltiples computadores, cada uno con su propio procesador, enlazados por una red de interconexión más o menos rápida.
+                </p>
+                <p>
+                    Sobre los sistemas de multicomputadoras de memoria distribuida, se simula memorias compartidas.
+                </p>
+                <p>
+                    Un clúster es un tipo de arquitectura paralela distribuida que consiste de un conjunto de computadores independientes 
+                    interconectados operando de forma conjunta como único recurso computacional, sin embargo, 
+                    cada computador puede utilizarse de forma independiente o separada.
+                </p>
+                <p>
+                    En esta arquitectura, el computador paralelo es esencialmente una colección de procesadores secuenciales, 
+                    cada uno con su propia memoria local, que pueden trabajar conjuntamente.<br><br>
+                    •Cada nodo tiene rápido acceso a su propia memoria y acceso a la memoria de otros nodos mediante una red de comunicaciones, 
+                    habitualmente una red de comunicaciones de alta velocidad.<br>
+                    •Los datos son intercambiados entre los nodos como mensajes a través de la red.<br>
+                    •Una red de ordenadores, especialmente si disponen de una interconexión de alta velocidad, 
+                    puede ser vista como un multicomputadora de memoria distribuida y como tal ser utilizada para resolver 
+                    problemas mediante computación paralela.
+                </p>
+                <p>
+                    <h3>Redes de interconexión estática</h3>
+                </p>
+                <p>
+                    Las redes estáticas emplean enlaces directos fijos entre los nodos. 
+                    Estos enlaces, una vez fabricado el sistema son difíciles de cambiar, por lo que la escalabilidad de estas topologías es baja. 
+                    Las redes estáticas pueden utilizarse con eficiencia en los sistemas en que pueden predecirse el tipo de tráfico de 
+                    comunicaciones entre sus procesadores.
+                </p>
+                <p>
+                    Clases de redes de interconexión:<br><br>
+                    •Formación lineal: Se trata de una red unidimensional en que los nodos se conectan cada uno con el siguiente medianteN-1 enlaces formando una línea.<br>
+                    •Mallas y toros: Esta red de interconexión es muy utilizada en la práctica. Las redes en toro son mallas en que sus filas y columnas tienen conexiones en anillo, esto contribuye a disminuir su diámetro.
+                </p>
+                <p>
+                    <h3>Casos de estudio</h3>
+                </p>
+                <p>
+                    Por numerosos motivos, el procesamiento distribuido se ha convertido en un área de gran importancia e 
+                    interés dentro de la Ciencia de la Computación, 
+                    produciendo profundas transformaciones en las líneas de I/D.
+                </p>
+                <p>
+                    Interesa realizar investigación en la especificación, transformación, optimización y evaluación de algoritmos distribuidos y paralelos. 
+                    Esto incluye el diseño y desarrollo de sistemas paralelos, la transformación de algoritmos secuenciales en paralelos, 
+                    y las métricas de evaluación de performance sobre distintas plataformas de soporte (hardware y software).
+                </p>
+                <p>
+                    Líneas De Investigación Y Desarrollo<br><br>
+                    •Paralelización de algoritmos secuenciales. Diseño y optimización de algoritmo.<br>
+                    •Arquitecturas multicore y multithreading en multicore.<br>
+                    •Arquitecturas multiprocesador.<br>
+                    •Modelos de representación y predicción de performance de algoritmos paralelos.<br>
+                    •Mapping y scheduling de aplicaciones paralelas sobre distintas arquitecturas multiprocesador.<br>
+                    •Métricas del paralelismo. Speedup, eficiencia, rendimiento, granularidad, superlinealidad.<br>
+                    •Balance de carga estático y dinámico. Técnicas de balanceo de carga.<br>
+                    •Análisis de los problemas de migración y asignación óptima de procesos y datos a procesadores. Migración dinámica.<br>
+                    •Patrones de diseño de algoritmos paralelos.<br>
+                    •Escalabilidad de algoritmos paralelos en arquitecturas multiprocesador distribuidas.<br>
+                    •Implementación de soluciones sobre diferentes modelos de arquitectura homogéneas y heterogéneas (multicores, clusters, multiclusters y grid). Ajuste del modelo de software al modelo de hardware, a fin de optimizar el sistema paralelo.<br>
+                    •Evaluación de performance.<br>
+                    •Laboratorios remotos para el acceso transparente a recursos de cómputo paralelo.
+                </p>
+            </article>   
+    </section>
+</body>
+</html>
